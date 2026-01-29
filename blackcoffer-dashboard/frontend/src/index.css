@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f7fb;
+  color: #222;
+}
+
+/* Layout */
+.app-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 25px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #4f46e5, #06b6d4);
+  color: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 32px;
+}
+
+.header p {
+  opacity: 0.9;
+}
+
+/* Cards */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Filters */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.filters input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.2s;
+}
+
+.filters input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  padding: 20px;
+  border-radius: 14px;
+  color: #fff;
+}
+
+.stat-box h3 {
+  font-size: 28px;
+}
+
+.stat-blue {
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+}
+.stat-purple {
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+.stat-green {
+  background: linear-gradient(135deg, #10b981, #22c55e);
+}
+
+/* Charts */
+.chart-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover Effects */
+.card,
+.chart-box,
+.stat-box {
+  transition: all 0.3s ease;
+}
+
+.card:hover,
+.chart-box:hover,
+.stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Chart container grid */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* Fancy chart cards */
+.chart-card {
+  background: linear-gradient(135deg, #ffffff, #f3f6ff);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.chart-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+/* Modern chart styling */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.chart-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 22px 22px 10px;
+  background: linear-gradient(135deg, #ffffff, #f7f9ff);
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transition: all 0.35s ease;
+}
+
+.chart-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--x, 50%) var(--y, 50%),
+    rgba(79, 70, 229, 0.15),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.chart-card:hover::before {
+  opacity: 1;
+}
+
+.chart-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.18);
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2933;
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
+}
